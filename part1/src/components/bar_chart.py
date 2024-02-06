@@ -16,7 +16,9 @@ def render(app: Dash) -> html.Div:
     )
     def update_bar_chart(nations: list[str]) -> html.Div:
 
-        fig = px.bar(MEDAL_DATA, x="medal", y="count",
+        filtered_data = MEDAL_DATA.query("nation in @nations")
+
+        fig = px.bar(filtered_data, x="medal", y="count",
                      color="nation", text="nation")
 
         return html.Div(dcc.Graph(figure=fig), id=ids.BAR_CHART)
