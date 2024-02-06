@@ -18,6 +18,9 @@ def render(app: Dash) -> html.Div:
 
         filtered_data = MEDAL_DATA.query("nation in @nations")
 
+        if filtered_data.shape[0] == 0:
+            return html.Div("No data selected.", id=ids.BAR_CHART)
+
         fig = px.bar(filtered_data, x="medal", y="count",
                      color="nation", text="nation")
 
