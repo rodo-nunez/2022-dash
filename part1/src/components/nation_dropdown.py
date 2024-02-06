@@ -1,5 +1,5 @@
 from dash import Dash, dcc, html
-from . import ids
+from src.components import ids
 
 
 def render(app: Dash) -> html.Div:
@@ -13,6 +13,11 @@ def render(app: Dash) -> html.Div:
                 options=[{"label": nation, "value": nation} for nation in all_nations],
                 value=all_nations,
                 multi=True,
-            )
+            ),
+            html.Button(
+                className="dropdown-button",
+                children=["Select All"],
+                id=ids.SELECT_ALL_NATIONS_BUTTON
+            ),
         ]
     )
