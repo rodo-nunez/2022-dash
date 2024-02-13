@@ -7,7 +7,7 @@ from src.components import (
     year_dropdown,
 )
 
-from ..data.source import DataSource
+from src.data.source import DataSource
 
 
 def create_layout(app: Dash, source: DataSource) -> html.Div:

@@ -7,7 +7,7 @@ from src.data.loader import load_transaction_data
 from src.data.source import DataSource
 
 LOCALE = "nl"
-DATA_PATH = "./data/transactions.csv"
+DATA_PATH = "part3/data/transactions.csv"
 
 
 def main() -> None:

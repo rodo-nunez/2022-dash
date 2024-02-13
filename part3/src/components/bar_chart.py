@@ -3,9 +3,9 @@ import plotly.express as px
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 
-from ..data.loader import DataSchema
-from ..data.source import DataSource
-from . import ids
+from src.data.loader import DataSchema
+from src.data.source import DataSource
+from src.components import ids
 
 
 def render(app: Dash, source: DataSource) -> html.Div:

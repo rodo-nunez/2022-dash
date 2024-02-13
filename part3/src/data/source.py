@@ -5,9 +5,7 @@ from typing import Optional
 
 import pandas as pd
 
-from ..data.loader import DataSchema
-from .loader import DataSchema
-
+from src.data.loader import DataSchema
 
 @dataclass
 class DataSource:

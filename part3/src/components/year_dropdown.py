@@ -2,9 +2,9 @@ import i18n
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 
-from ..data.source import DataSource
-from . import ids
-from .dropdown_helper import to_dropdown_options
+from src.data.source import DataSource
+from src.components import ids
+from src.components.dropdown_helper import to_dropdown_options
 
 
 def render(app: Dash, source: DataSource) -> html.Div:

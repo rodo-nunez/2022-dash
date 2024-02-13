@@ -3,8 +3,8 @@ import plotly.graph_objects as go
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 
-from ..data.source import DataSource
-from . import ids
+from src.data.source import DataSource
+from src.components import ids
 
 
 def render(app: Dash, source: DataSource) -> html.Div:
