@@ -14,7 +14,7 @@ def main() -> None:
 
     app = Dash(external_stylesheets=[BOOTSTRAP])
     app.title = "Financial Dashboard"
-    app.layout = create_layout(app)
+    app.layout = create_layout(app, data)
     app.run()
 
 
