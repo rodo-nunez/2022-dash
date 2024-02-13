@@ -5,6 +5,7 @@ from src.components import year_dropdown
 from src.components import month_dropdown
 from src.components import category_dropdown
 from src.components import bar_chart
+from src.components import pie_chart
 
 def create_layout(app: Dash, data: pd.DataFrame) -> html.Div:
     return html.Div(
@@ -21,5 +22,6 @@ def create_layout(app: Dash, data: pd.DataFrame) -> html.Div:
                 ],
             ),
             bar_chart.render(app, data),
+            pie_chart.render(app, data),
         ]
     )
